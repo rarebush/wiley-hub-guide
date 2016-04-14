@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Wiley HUB Guide</title>
+
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="/scripts/jscolor/jscolor.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="checkscroll">
+        <!-- UI -->
+        {{> header}}
+        
+        <!-- sections -->
+        {{> home}}
+        {{> quickstart}}
+        {{> overview}}
+        {{> hubflow}}
+        {{> identity}}
+        {{> identity-hubhome}}
+        {{> identity-journalhome}}
+        {{> identity-issues}}
+        {{> identity-issuecontents}}
+        {{> identity-searchresults}}
+        {{> identity-anywherearticle}}
+        {{> identity-generic}}
+        {{> primarycontent}}
+        {{> primarycontent-hubhome}}
+        {{> primarycontent-journalhome}}
+        {{> primarycontent-issues}}
+        {{> primarycontent-issuecontents}}
+        {{> primarycontent-searchresults}}
+        {{> primarycontent-anywherearticle}}
+        {{> primarycontent-generic}}
+        {{> supportingcontent}}
+        
+        <!-- global controls -->
+        <a href="#home" class="whg-back-to-top">
+            <button type="button" class="btn btn-primary">Back to top <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></button>
+        </a>        
+        {{> modify-theme-modal}}
+        {{> ui-menu-drawer}}
+        
+        <!-- waypoint scripting -->
+        <script src="/scripts/waypoints/waypoints.js"></script>
+        <script src="/scripts/whg-scripts.js"></script>
+
+    </div>
+</body>
+
+</html>

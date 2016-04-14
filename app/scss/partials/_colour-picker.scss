@@ -1,0 +1,9 @@
+.panel {
+    @include susy-clearfix;
+}
+.whg-colour-picker__table {
+    float: right;    
+        th, td {
+            padding: 0.5rem;
+        }
+}

@@ -1,0 +1,11 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 576 128" enable-background="new 0 0 576 128" xml:space="preserve">
+<rect fill="#FFFFFF" width="576" height="128"/>
+<path fill="#A0C7E5" d="M0,64h576v64H0V64z"/>
+<path fill="#FFFFFF" d="M16,80h560v32H16V80z"/>
+<path fill="#A0C7E5" d="M264,16h48c4.4,0,8,3.6,8,8v16c0,4.4-3.6,8-8,8h-48c-4.4,0-8-3.6-8-8V24C256,19.6,259.6,16,264,16z"/>
+<path fill="#A0C7E5" d="M344,16h48c4.4,0,8,3.6,8,8v16c0,4.4-3.6,8-8,8h-48c-4.4,0-8-3.6-8-8V24C336,19.6,339.6,16,344,16z"/>
+<path fill="#A0C7E5" d="M424,16h48c4.4,0,8,3.6,8,8v16c0,4.4-3.6,8-8,8h-48c-4.4,0-8-3.6-8-8V24C416,19.6,419.6,16,424,16z"/>
+<path fill="#E87700" d="M16,80h112v32H16V80z"/>
+    <image class="logo-placeholder" width="128px" height="32px" y="16" x="16" xlink:href="/images/content/placeholder-logo.svg" />
+</svg>

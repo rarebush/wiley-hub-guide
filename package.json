@@ -1,0 +1,27 @@
+{
+  "name": "wiley-hub-guide",
+  "version": "1.0.0",
+  "description": "A guide to the HUB framework",
+  "main": "gulpfile.js",
+  "scripts": {
+    "gulp": "gulp",
+    "start": "gulp serve"
+  },
+  "author": "Stuart Allen",
+  "licenses": "John Wiley & Sons",
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=2.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.7.1",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-compile-handlebars": "^0.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.2"
+  },
+  "dependencies": {
+    "del": "^2.0.2"
+  }
+}

@@ -1,0 +1,149 @@
+// fonts
+$wiley-sans: 'Open Sans', sans-serif;
+$wiley-mono: 'Roboto Mono', monospace;
+$wiley-serif: 'Droid Serif', serif;
+$wiley-slab: 'Roboto Slab', serif;
+
+// normal greys colors
+//$greys: (
+//    grey-50: #FAFAFA,
+//    grey-100: #F5F5F5,
+//    grey-200: #EEEEEE,
+//    grey-300: #E0E0E0,
+//    grey-400: #BDBDBD,
+//    grey-500: #9E9E9E,
+//    grey-600: #757575,
+//    grey-700: #616161,
+//    grey-800: #424242,
+//    grey-900: #212121
+//);
+
+// warm greys
+$greys: (
+    grey-50: #FAF7F2,
+    grey-100: #f5f2ed,
+    grey-200: #edebe6,
+    grey-300: #E7E4DF,
+    grey-400: #bdbbb7,
+    grey-500: #9e9d99,
+    grey-600: #757472,
+    grey-700: #61605e,
+    grey-800: #424240,
+    grey-900: #212120
+);
+
+$others: (
+    wiley-black: #1F1F1E,
+    wiley-white: #FFFFFF,
+    teal-light: #B1D8CF,
+    teal: #00A3B2,
+    teal-dark: #075B81,
+    purple-light: #BCADE2,
+    purple: #855199,
+    purple-dark: #522464,
+    blue-light: #A0C7E5,
+    blue: #648FD8,
+    blue-dark: #032977,
+    green-light: #C6DE8C,
+    green: #92CB9C,
+    green-dark: #1D5C56,
+    red-light: #D22938,
+    red: #B40043,
+    red-dark: #800049,
+    orange-light: #F2BA49,
+    orange: #E87700,
+    orange-dark: #E55800
+);
+
+$colors: map-merge($others, $greys);
+
+// bootstrap variables (override)
+
+$brand-primary: map-get($colors, purple);
+$brand-success: map-get($colors, green);
+$brand-info: map-get($colors, blue);
+$brand-warning: map-get($colors, orange-light);
+$brand-danger: map-get($colors, red-light);
+
+
+// mixins
+@mixin clearfix {
+	&:after {
+		clear: both;
+	}
+
+	&:before,
+	&:after {
+		display: table;
+		content: ' ';
+	}
+}
+
+@mixin border-box {
+	box-sizing: border-box;
+}
+
+
+
+/*********************
+BREAKPOINTS all set in min-width to encourage mobile first design!
+*********************/
+
+ @mixin bp($point) {
+     @if $point==largedesktop {
+         @media (min-width: 85em) {
+             @content ;
+         }
+     }
+     @else if $point==desktop {
+         @media (min-width: 70em) {
+             @content ;
+         }
+     }
+     @else if $point==laptop {
+         @media (min-width: 64em) {
+             @content ;
+         }
+     }
+     @else if $point==tablet {
+         @media (min-width: 50em) {
+             @content ;
+         }
+     }
+     @else if $point==phablet {
+         @media (min-width: 37.5em) {
+             @content ;
+         }
+     }
+     @else if $point==mobileonly {
+         @media (max-width: 37.5em) {
+             @content ;
+         }
+     }
+ }
+
+/***
+hex transparency mixin
+***/
+
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+/***
+Shadow mixins
+***/
+
+@mixin shadow-light {
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.25);
+}
+@mixin shadow-medium {
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.25);
+}
+@mixin shadow-light-inset {
+    box-shadow: inset 0px 0px 4px 0px rgba(0,0,0,0.25);
+}
+@mixin shadow-medium-inset {
+    box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.25);
+}

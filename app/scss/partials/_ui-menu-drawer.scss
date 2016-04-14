@@ -1,0 +1,65 @@
+@keyframes animate-drawer {
+    0%   {visibility: visible;}
+    25%  {visibility: visible;}
+    50%  {visibility: visible;}
+    100% {visibility: hidden;}
+}
+
+.whg-menu-drawer {
+    z-index: 10;
+    visibility: visible;
+    opacity: 1;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 0.25s;
+    .whg-menu-drawer__overlay {
+        opacity: 1;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: opacity 0.25s;
+    }
+    .whg-menu-drawer__container {
+        overflow-y: auto;
+        position: absolute;
+        background-color: map-get($colors, grey-50);
+        top: 0;
+        bottom: 0;
+        min-width: 320px;
+        transition: transform 0.25s;
+        .whg-menu-drawer__header {
+            margin-top: 1rem;
+            margin-right: 1rem;
+            float: right;
+            .glyphicon {
+                cursor: pointer;
+            }
+        }
+        .whg-menu-drawer__content {
+            margin: 3rem 0;            
+        }
+    }
+}
+
+.whg-menu-drawer.whg-menu-drawer--closed {
+    visibility: hidden;
+    animation-name: animate-drawer;
+    animation-duration: 0.25s;    
+    opacity: 0;
+    .whg-menu-drawer__overlay {
+        opacity: 0;
+    }
+    .whg-menu-drawer__container {
+        transform: translateX(-100%)
+    }
+}
+
+body.noscroll {
+    overflow: hidden;
+}

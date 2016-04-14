@@ -1,0 +1,47 @@
+.whg-back-to-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    button.btn {
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+        font-size: 0;
+        border-radius: 0;
+        span {
+            font-size: 2rem;
+        }
+    }
+    @include bp(tablet) {
+        bottom: 2rem;
+        right: 2rem;
+        button.btn {
+            border-radius: 2px;
+            font-size: 1rem;
+            span {
+                font-size: 1em;
+            }
+        }
+    }
+}.whg-back-to-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    button.btn {
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+        font-size: 0;
+        border-radius: 0;
+        span {
+            font-size: 2rem;
+        }
+    }
+    @include bp(tablet) {
+        bottom: 2rem;
+        right: 2rem;
+        button.btn {
+            border-radius: 2px;
+            font-size: 1rem;
+            span {
+                font-size: 1em;
+            }
+        }
+    }
+}

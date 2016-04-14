@@ -1,0 +1,97 @@
+a {
+    word-wrap: break-word;
+}
+
+h1.decorated,
+h2.decorated,
+h3.decorated,
+h4.decorated,
+h5.decorated,
+h6.decorated {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        left: -1rem;
+        height: 100%;
+        border-left: 4px solid map-get($colors, purple);
+    }
+}
+
+//callouts
+.wsg-callout {
+    position: relative;
+    padding: 0.5rem 1rem 0.75rem 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 500;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        border-left: solid 4px $brand-primary;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    &.wsg-callout--success {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $brand-success;
+        }
+        &:before {
+            border-left-color: $brand-success;
+        }
+    }
+    &.wsg-callout--info {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $brand-info;
+        }
+        &:before {
+            border-left-color: $brand-info;
+        }
+    }
+    &.wsg-callout--warning {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $brand-warning;
+        }
+        &:before {
+            border-left-color: $brand-warning;
+        }
+    }
+    &.wsg-callout--danger {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $brand-danger;
+        }
+        &:before {
+            border-left-color: $brand-danger;
+        }
+    }
+}
