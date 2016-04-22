@@ -52,7 +52,6 @@
                 display: block;
                 position: relative;
                 width: 100%;
-                height: auto;
             }
         }
         @include bp(tablet) {
@@ -80,11 +79,15 @@
 }
 
 #home .whg-section__text {
-    margin-top: 18rem;
+    margin-top: 12rem;
+    @include bp(tablet) {
+        margin-top: 16rem;
+    }
 }
 
 //whg home
-.whg-home__contents, .whg-home__menu {
+.whg-home__contents,
+.whg-home__menu {
     ul {
         list-style-type: none;
         padding: 0;

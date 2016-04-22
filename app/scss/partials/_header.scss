@@ -21,10 +21,13 @@
         padding: 8rem 8rem 0.5rem 8rem;
     }
     .site-heading__text {
-        font-size: 4em;
+        font-size: 3em;
         margin: 0;
         a {
             text-decoration: none;
+        }
+        @include bp(tablet) {
+            font-size: 4em;
         }
     }
 }
@@ -41,7 +44,10 @@
     }
     .site-heading__text {
         display: inline-block;
-        font-size: 2em;
+        font-size: 1.5em;
+        @include bp(phablet) {
+            font-size: 2em;
+        }
     }
 }
 
@@ -66,28 +72,24 @@
 }
 
 #whg-menu-toggle {
-    @include bp(tablet) {
-        &:after {
-            content: "menu";
-            font-size: 0.5em;
-            position: absolute;
-            bottom: -0.75rem;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+    &:after {
+        content: "menu";
+        font-size: 0.5em;
+        position: absolute;
+        bottom: -0.75rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
 #whg-theme-modal-toggle {
-    @include bp(tablet) {
-        &:after {
-            content: "customize";
-            font-size: 0.5em;
-            position: absolute;
-            bottom: -0.75rem;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+    &:after {
+        content: "customize";
+        font-size: 0.5em;
+        position: absolute;
+        bottom: -0.75rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -98,17 +100,13 @@
             margin: 0 0.25rem 0.25rem 0;
         }
         #whg-menu-toggle {
-            @include bp(tablet) {
-                &:after {
-                    content: "";
-                }
+            &:after {
+                content: "";
             }
         }
         #whg-theme-modal-toggle {
-            @include bp(tablet) {
-                &:after {
-                    content: "";
-                }
+            &:after {
+                content: "";
             }
         }
     }

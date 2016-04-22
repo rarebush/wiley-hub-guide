@@ -29,7 +29,7 @@
             </label>
         </div>
     </div>
-
+    {{!
     <div class="form-group">
         <label for="qsJournalQuantity">How many journals will be included in the Hub?</label>
         <input type="text" class="form-control" class="form-control" name="qsJournalQuantity">
@@ -39,7 +39,7 @@
             </label>
         </div>
     </div>
-
+    }} {{!
     <div class="form-group">
         <div class="checkbox">
             <label for="qsWileyPublish">
@@ -47,10 +47,26 @@
             </label>
         </div>
     </div>
-
+    }}
 </form>
 
+<button onclick='sendFormToEmail();' class="btn btn-primary btn-lg center-block">Email data <span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>
 
-<button onclick='downloadCSV();' class="btn btn-primary btn-lg center-block">Download data <span class="glyphicon glyphicon-save" aria-hidden="true"></span></button>
+{{!<div><span class="text-center center-block"><small>will not work on iOS</small></span></div>}}
 
-<div><span class="text-center center-block"><small>will not work on iOS</small></span></div>
+<script>
+    function sendFormToEmail() {
+        var inputs = $('#quickstart :input').serializeArray();
+        console.log(inputs);
+        var bodyStr = "";
+        jQuery.each(inputs, function (index, value) {
+            var valueString = value.value.toString();
+            valueString = valueString.replace("#", "");
+            var nameString = value.name.toString();
+            nameString = nameString.replace("qs", "");
+            bodyStr += nameString + " = " + valueString + "%0D%0A";
+        });
+
+        window.location = "mailto:email?subject=subject&body=" + bodyStr;
+    }
+</script>
